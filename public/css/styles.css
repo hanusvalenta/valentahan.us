@@ -1,5 +1,13 @@
 /* public/css/styles.css */
 
+/* Font-face definition for custom font */
+@font-face {
+  font-family: 'ThatThatNewPixel';
+  src: url('../font/ThatThatNewPixel-Round.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +15,9 @@
   scroll-behavior: smooth;
 }
 
+/* Use custom font throughout the site */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'ThatThatNewPixel', Arial, sans-serif;
   color: #333;
   background: #fff;
   line-height: 1.6;
