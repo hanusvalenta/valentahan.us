@@ -33,3 +33,24 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Full Stack Developer";
+  const roleElement = document.getElementById("role");
+  let index = 0;
+
+  // Clear initial text from the element
+  roleElement.textContent = "";
+
+  // Typing function
+  function type() {
+    if (index < text.length) {
+      roleElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // Adjust typing speed here (100ms per character)
+    }
+  }
+
+  // Start typing on page load
+  type();
+});
