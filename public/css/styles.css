@@ -1,85 +1,87 @@
 /* public/css/styles.css */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background: #fff;
-    line-height: 1.6;
-  }
-  
-  .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .name {
-    font-size: 5rem;
-    animation: fadeIn 2s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .projects, .about, .contact {
-    padding: 5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .project {
-    font-size: 2rem;
-    padding: 2rem;
-    margin: 1rem 0;
-    border: 1px solid #333;
-    width: 80%;
-    transition: transform 0.3s ease;
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-  }
-  
-  .about p, .contact form {
-    max-width: 600px;
-    text-align: left;
-  }
-  
-  .contact form input, .contact form textarea, .contact form button {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.8rem;
-  }
-  
-  .socials a {
-    color: #333;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-  /* public/css/styles.css */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
 
-  .project, .about, .contact {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-size: 10vw;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+  transform-origin: center;
+}
+
+/* Scrolling animation applied to .name class */
+.shrink {
+  transform: scale(0.5) translateY(-50%);
+  opacity: 0.6;
+}
+
+/* Spaced-out sections */
+.projects, .about, .contact {
+  padding: 8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project {
+  font-size: 2rem;
+  padding: 3rem;
+  margin: 2rem 0;
+  border: 1px solid #333;
+  width: 80%;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.about p, .contact form {
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact form input, .contact form textarea, .contact form button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.socials a {
+  color: #333;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Fade and slide animation for visibility */
+.project, .about, .contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
