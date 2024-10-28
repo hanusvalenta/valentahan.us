@@ -23,23 +23,18 @@ body {
   text-align: center;
 }
 
-.name {
+/* Individual letter styling */
+.name span {
+  display: inline-block;
   font-size: 10vw;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 1;
-  transform-origin: center;
 }
 
 .role {
   font-size: 1.5rem;
   margin-top: 1rem;
   color: #666;
-}
-
-/* Scrolling animation applied to .name class */
-.shrink {
-  transform: scale(0.5) translateY(-50%);
-  opacity: 0.6;
 }
 
 /* Section Styles */
