@@ -39,12 +39,13 @@
 
   <section class="contact">
     <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Your Message"></textarea>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
+    <div id="formResponse" class="form-response"></div> <!-- For displaying success/failure message -->
     <div class="socials">
       <a href="#">Twitter</a>
       <a href="#">LinkedIn</a>
