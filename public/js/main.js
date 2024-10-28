@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.querySelectorAll('.project, .about, .contact').forEach(section => {
+  document.querySelectorAll('.project, .about, .contact, .skills, .technologies').forEach(section => {
     observer.observe(section);
   });
 

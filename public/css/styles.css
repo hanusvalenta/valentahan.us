@@ -17,6 +17,7 @@ body {
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -29,14 +30,20 @@ body {
   transform-origin: center;
 }
 
+.role {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #666;
+}
+
 /* Scrolling animation applied to .name class */
 .shrink {
   transform: scale(0.5) translateY(-50%);
   opacity: 0.6;
 }
 
-/* Spaced-out sections */
-.projects, .about, .contact {
+/* Section Styles */
+.skills, .technologies, .projects, .about, .contact {
   padding: 8rem 1rem;
   display: flex;
   flex-direction: column;
@@ -44,8 +51,12 @@ body {
   text-align: center;
 }
 
+.skills p, .technologies p, .about p, .contact form {
+  max-width: 600px;
+}
+
 .project {
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 3rem;
   margin: 2rem 0;
   border: 1px solid #333;
@@ -55,11 +66,6 @@ body {
 
 .project:hover {
   transform: scale(1.05);
-}
-
-.about p, .contact form {
-  max-width: 600px;
-  text-align: left;
 }
 
 .contact form input, .contact form textarea, .contact form button {
@@ -74,8 +80,7 @@ body {
   text-decoration: none;
 }
 
-/* Fade and slide animation for visibility */
-.project, .about, .contact {
+.project, .about, .contact, .skills, .technologies {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
