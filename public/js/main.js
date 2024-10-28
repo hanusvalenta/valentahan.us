@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nameLetters.forEach((letter, index) => {
       const speed = randomSpeeds[index];
-      const transformValue = scrollPosition * speed;
-      
+      const transformValue = -scrollPosition * speed; // Negative value to move up
+
       letter.style.transform = `translateY(${transformValue}px)`;
       letter.style.opacity = 1 - scrollPosition / (window.innerHeight * 2);
     });
