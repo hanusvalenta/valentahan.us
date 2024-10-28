@@ -1,4 +1,3 @@
-/* Font-face definition for custom font */
 @font-face {
   font-family: 'ThatThatNewPixel';
   src: url('../font/ThatThatNewPixel-Round.woff') format('woff');
@@ -97,14 +96,14 @@ body {
 }
 
 .project-2:hover {
-  background-image: url('../images/social-media-app.jpg');
+  background-image: url('../images/Desktop.png');
   background-size: cover;
   background-position: center;
   color: #000;
 }
 
 .project-3:hover {
-  background-image: url('../images/portfolio.jpg');
+  background-image: url('../images/chcoom.png');
   background-size: cover;
   background-position: center;
   color: #000;
