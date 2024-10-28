@@ -15,11 +15,10 @@
   scroll-behavior: smooth;
 }
 
-/* Set the entire site's background to black and text to white */
 body {
   font-family: 'ThatThatNewPixel', Arial, sans-serif;
-  color: #fff; /* White text */
-  background: #000; /* Black background */
+  color: #fff;
+  background: #000;
   line-height: 1.6;
 }
 
@@ -42,10 +41,10 @@ body {
 .role {
   font-size: 1.5rem;
   margin-top: 1rem;
-  color: #999; /* Light gray for secondary text */
+  color: #999;
 }
 
-.skills, .technologies, .projects, .about, .contact {
+.skills, .technologies, .about, .contact {
   padding: 8rem 1rem;
   display: flex;
   flex-direction: column;
@@ -57,15 +56,31 @@ body {
   max-width: 600px;
 }
 
+/* Projects Section with Horizontal Project Buttons */
+.projects {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 1.5rem; /* Space between heading and buttons */
+  font-size: 2.5rem; /* Adjust size as desired */
+}
+
+.project-container {
+  display: flex;
+  gap: 1rem; /* Space between project buttons */
+  justify-content: center; /* Center the project buttons */
+}
+
 .project {
-  font-size: 1.8rem;
-  padding: 3rem;
-  margin: 2rem 0;
-  border: 1px solid #fff; /* White border */
-  width: 80%;
+  font-size: 1rem; /* Smaller text */
+  padding: 2rem; /* Smaller padding */
+  border: 1px solid #fff;
+  width: 250px; /* Fixed width for each project */
   text-align: center;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-  color: #fff; /* White text */
+  color: #fff;
 }
 
 /* Unique hover effects for each project */
@@ -73,7 +88,7 @@ body {
   background-image: url('../images/hollowtail.jpg');
   background-size: cover;
   background-position: center;
-  color: #000; /* Black text on hover for contrast */
+  color: #000;
 }
 
 .project-2:hover {
@@ -90,55 +105,37 @@ body {
   color: #000;
 }
 
-.project-4:hover {
-  background-image: url('../images/task-api.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #000;
-}
-
-.project-5:hover {
-  background-image: url('../images/blog-cms.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #000;
-}
-
 .project:hover {
   transform: scale(1.05);
 }
 
+/* Contact Form */
 .contact form input, .contact form textarea, .contact form button {
   width: 100%;
   margin-top: 1rem;
   padding: 1rem;
-  background: #333; /* Dark gray input background */
-  color: #fff; /* White input text */
-  border: 1px solid #fff; /* White border */
-}
-
-.contact form input::placeholder,
-.contact form textarea::placeholder {
-  color: #bbb; /* Lighter gray for placeholders */
+  background: #333;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .contact form button {
-  background-color: #fff; /* White button */
-  color: #000; /* Black text on button */
+  background-color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
 .contact form button:hover {
-  background-color: #bbb; /* Light gray on hover */
-  color: #000;
+  background-color: #bbb;
 }
 
 .socials a {
-  color: #fff; /* White links */
+  color: #fff;
   margin: 0 1rem;
   text-decoration: none;
 }
 
+/* Fade-in and slide-up animation */
 .project, .about, .contact, .skills, .technologies {
   opacity: 0;
   transform: translateY(30px);
@@ -148,4 +145,44 @@ body {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Adjusted positioning for <About> tags near the text content */
+.about {
+  position: relative;
+  padding: 2rem;
+  max-width: 600px; /* Limit the width of About section for a centered look */
+  margin: 0 auto;
+}
+
+.about-tag {
+  font-family: 'ThatThatNewPixel', Arial, sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.7; /* Slight transparency */
+  position: absolute;
+}
+
+/* Position <About> and </About> slightly left of the text content */
+.about-tag.top {
+  top: 0;
+  left: -2rem; /* Slightly left of the content */
+}
+
+.about-tag.bottom {
+  bottom: 0;
+  left: -2rem;
+}
+
+/* Styling for the About section quote */
+.quote {
+  font-style: italic;
+  margin-top: 1.5rem;
+  color: #999;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 1rem;
+  border-left: 3px solid #fff;
+  display: inline-block;
 }
