@@ -15,11 +15,11 @@
   scroll-behavior: smooth;
 }
 
-/* Use custom font throughout the site */
+/* Set the entire site's background to black and text to white */
 body {
   font-family: 'ThatThatNewPixel', Arial, sans-serif;
-  color: #333;
-  background: #fff;
+  color: #fff; /* White text */
+  background: #000; /* Black background */
   line-height: 1.6;
 }
 
@@ -42,7 +42,7 @@ body {
 .role {
   font-size: 1.5rem;
   margin-top: 1rem;
-  color: #666;
+  color: #999; /* Light gray for secondary text */
 }
 
 .skills, .technologies, .projects, .about, .contact {
@@ -61,11 +61,11 @@ body {
   font-size: 1.8rem;
   padding: 3rem;
   margin: 2rem 0;
-  border: 1px solid #333;
+  border: 1px solid #fff; /* White border */
   width: 80%;
   text-align: center;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-  color: #333;
+  color: #fff; /* White text */
 }
 
 /* Unique hover effects for each project */
@@ -73,35 +73,35 @@ body {
   background-image: url('../images/hollowtail.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000; /* Black text on hover for contrast */
 }
 
 .project-2:hover {
   background-image: url('../images/social-media-app.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 
 .project-3:hover {
   background-image: url('../images/portfolio.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 
 .project-4:hover {
   background-image: url('../images/task-api.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 
 .project-5:hover {
   background-image: url('../images/blog-cms.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 
 .project:hover {
@@ -112,10 +112,29 @@ body {
   width: 100%;
   margin-top: 1rem;
   padding: 1rem;
+  background: #333; /* Dark gray input background */
+  color: #fff; /* White input text */
+  border: 1px solid #fff; /* White border */
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #bbb; /* Lighter gray for placeholders */
+}
+
+.contact form button {
+  background-color: #fff; /* White button */
+  color: #000; /* Black text on button */
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #bbb; /* Light gray on hover */
+  color: #000;
 }
 
 .socials a {
-  color: #333;
+  color: #fff; /* White links */
   margin: 0 1rem;
   text-decoration: none;
 }
