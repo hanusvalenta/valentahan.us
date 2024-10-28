@@ -1,4 +1,3 @@
-// public/js/main.js
 document.addEventListener("DOMContentLoaded", () => {
   // Scroll-based animation for each letter
   const nameLetters = document.querySelectorAll('.name span');
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nameLetters.forEach((letter, index) => {
       const speed = randomSpeeds[index];
-      const transformValue = -scrollPosition * speed; // Negative value to move up
+      const transformValue = -scrollPosition * speed;
 
       letter.style.transform = `translateY(${transformValue}px)`;
       letter.style.opacity = 1 - scrollPosition / (window.innerHeight * 2);
@@ -32,11 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.project, .about, .contact, .skills, .technologies').forEach(section => {
     observer.observe(section);
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Typing effect for "Full Stack Developer"
   const text = "Full Stack Developer";
-  const roleElement = document.getElementById("role");
+  const roleElement = document.querySelector(".role"); 
   let index = 0;
 
   // Clear initial text from the element
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < text.length) {
       roleElement.textContent += text.charAt(index);
       index++;
-      setTimeout(type, 100); // Adjust typing speed here (100ms per character)
+      setTimeout(type, 100);
     }
   }
 

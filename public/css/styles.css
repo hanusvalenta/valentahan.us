@@ -1,5 +1,3 @@
-/* public/css/styles.css */
-
 /* Font-face definition for custom font */
 @font-face {
   font-family: 'ThatThatNewPixel';
@@ -38,7 +36,6 @@ body {
   opacity: 1;
 }
 
-/* Typing effect cursor */
 .role {
   display: inline-block;
   font-size: 1.5rem;
@@ -63,20 +60,11 @@ body {
   }
 }
 
-.skills, .technologies, .about, .contact {
+.skills, .technologies, .about, .projects, .contact {
   padding: 8rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.skills p, .technologies p, .about p, .contact form {
-  max-width: 600px;
-}
-
-.projects {
-  padding: 4rem 1rem;
   text-align: center;
 }
 
