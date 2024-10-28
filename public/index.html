@@ -60,13 +60,13 @@
 
   <section class="contact">
     <h2>Contact</h2>
-    <form id="contactForm">
+    <form id="contactForm" action="/contact" method="POST">
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <div id="formResponse" class="form-response"></div>
+    <div id="formResponse" class="form-response"></div> <!-- Message appears here -->    
     <div class="socials">
       <a href="#">Twitter</a>
       <a href="#">LinkedIn</a>

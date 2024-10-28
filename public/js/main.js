@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Scroll-based animation for each letter
+  // Scroll-based animation for each letter in name
   const nameLetters = document.querySelectorAll('.name span');
 
-  // Assign a random speed multiplier to each letter
+  // Assign a random speed multiplier to each letter for unique scroll effect
   const randomSpeeds = Array.from(nameLetters).map(() => Math.random() * 0.2 + 0.05);
 
   window.addEventListener('scroll', () => {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Intersection Observer for sections
+  // Intersection Observer for fading in sections
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -32,15 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 
-  // Typing effect for "Full Stack Developer"
+  // Typing effect for the "Full Stack Developer" role
   const text = "Full Stack Developer";
   const roleElement = document.querySelector(".role"); 
   let index = 0;
 
-  // Clear initial text from the element
+  // Clear initial text and start typing
   roleElement.textContent = "";
-
-  // Typing function
   function type() {
     if (index < text.length) {
       roleElement.textContent += text.charAt(index);
@@ -48,7 +46,37 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(type, 100);
     }
   }
+  type(); // Start typing on page load
 
-  // Start typing on page load
-  type();
+  // Handle contact form submission without reload
+  document.getElementById('contactForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/contact', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const result = await response.json();
+      document.getElementById('formResponse').textContent = result.message;
+
+      if (response.ok) {
+        form.reset(); // Clear form after successful submission
+      }
+    } catch (error) {
+      document.getElementById('formResponse').textContent = 'Failed to send message. Please try again.';
+      console.error('Error:', error);
+    }
+  });
 });
